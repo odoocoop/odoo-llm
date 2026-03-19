@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="llm_publisher_qwen" model="llm.publisher">
+        <field name="name">Qwen (Alibaba Cloud)</field>
+        <field name="official" eval="True" />
+        <field name="frontier" eval="True" />
+        <field name="description">Qwen is a series of large language models developed by Alibaba Cloud. Qwen models are available both through Alibaba Cloud's DashScope API and can be run locally. The series includes various sizes from small efficient models to large powerful ones, with support for multiple languages and multimodal capabilities.</field>
+        <field name="logo" type="base64" file="llm_qwen/static/description/qwen_logo.png" />
+        <field name="meta">{
+            "website": "https://www.aliyun.com/product/dashscope",
+            "developer": "Alibaba Cloud",
+            "key_features": ["Multilingual Support", "Large Context Window", "Code Generation", "Mathematical Reasoning", "Local Deployment Available"]
+            }</field>
+    </record>
+</odoo>

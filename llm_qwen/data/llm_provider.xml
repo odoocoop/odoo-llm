@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!-- Qwen Cloud Provider Configuration -->
+    <record id="llm_provider_qwen_cloud" model="llm.provider">
+        <field name="name">Qwen Cloud (DashScope)</field>
+        <field name="service">qwen</field>
+        <field name="active" eval="True" />
+        <field name="api_base">https://dashscope.aliyuncs.com/compatible-mode/v1</field>
+        <!-- API key should be set by user: Get from https://dashscope.console.aliyun.com/apiKey -->
+        <field name="api_key"></field>
+    </record>
+
+    <!-- Qwen Local Provider Configuration (for vLLM or Ollama with OpenAI-compatible API) -->
+    <record id="llm_provider_qwen_local" model="llm.provider">
+        <field name="name">Qwen Local</field>
+        <field name="service">qwen</field>
+        <field name="active" eval="False" />
+        <field name="api_base">http://localhost:8000/v1</field>
+        <!-- No API key needed for local deployment -->
+        <field name="api_key">not-needed</field>
+    </record>
+</odoo>
