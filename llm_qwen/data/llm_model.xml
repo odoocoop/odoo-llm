@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Qwen Cloud Models -->
+    <record id="llm_model_qwen_max" model="llm.model">
+        <field name="name">qwen-max</field>
+        <field name="provider_id" ref="llm_provider_qwen_cloud" />
+        <field name="publisher_id" ref="llm_publisher_qwen" />
+        <field name="model_use">chat</field>
+        <field name="default" eval="True" />
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="llm_model_qwen_plus" model="llm.model">
+        <field name="name">qwen-plus</field>
+        <field name="provider_id" ref="llm_provider_qwen_cloud" />
+        <field name="publisher_id" ref="llm_publisher_qwen" />
+        <field name="model_use">chat</field>
+        <field name="default" eval="False" />
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="llm_model_qwen_turbo" model="llm.model">
+        <field name="name">qwen-turbo</field>
+        <field name="provider_id" ref="llm_provider_qwen_cloud" />
+        <field name="publisher_id" ref="llm_publisher_qwen" />
+        <field name="model_use">chat</field>
+        <field name="default" eval="False" />
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="llm_model_qwen_vl_max" model="llm.model">
+        <field name="name">qwen-vl-max</field>
+        <field name="provider_id" ref="llm_provider_qwen_cloud" />
+        <field name="publisher_id" ref="llm_publisher_qwen" />
+        <field name="model_use">chat</field>
+        <field name="default" eval="False" />
+        <field name="active" eval="True" />
+    </record>
+
+    <!-- Qwen Local Models (common local deployments) -->
+    <record id="llm_model_qwen2_5_7b" model="llm.model">
+        <field name="name">qwen2.5:7b</field>
+        <field name="provider_id" ref="llm_provider_qwen_local" />
+        <field name="publisher_id" ref="llm_publisher_qwen" />
+        <field name="model_use">chat</field>
+        <field name="default" eval="True" />
+        <field name="active" eval="False" />
+    </record>
+
+    <record id="llm_model_qwen2_5_14b" model="llm.model">
+        <field name="name">qwen2.5:14b</field>
+        <field name="provider_id" ref="llm_provider_qwen_local" />
+        <field name="publisher_id" ref="llm_publisher_qwen" />
+        <field name="model_use">chat</field>
+        <field name="default" eval="False" />
+        <field name="active" eval="False" />
+    </record>
+
+    <record id="llm_model_qwen2_5_32b" model="llm.model">
+        <field name="name">qwen2.5:32b</field>
+        <field name="provider_id" ref="llm_provider_qwen_local" />
+        <field name="publisher_id" ref="llm_publisher_qwen" />
+        <field name="model_use">chat</field>
+        <field name="default" eval="False" />
+        <field name="active" eval="False" />
+    </record>
+
+    <record id="llm_model_qwen2_5_72b" model="llm.model">
+        <field name="name">qwen2.5:72b</field>
+        <field name="provider_id" ref="llm_provider_qwen_local" />
+        <field name="publisher_id" ref="llm_publisher_qwen" />
+        <field name="model_use">chat</field>
+        <field name="default" eval="False" />
+        <field name="active" eval="False" />
+    </record>
+
+    <!-- Embedding Models -->
+    <record id="llm_model_qwen_embedding" model="llm.model">
+        <field name="name">text-embedding-v3</field>
+        <field name="provider_id" ref="llm_provider_qwen_cloud" />
+        <field name="publisher_id" ref="llm_publisher_qwen" />
+        <field name="model_use">embedding</field>
+        <field name="default" eval="True" />
+        <field name="active" eval="True" />
+    </record>
+</odoo>
